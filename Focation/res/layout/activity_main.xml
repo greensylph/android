@@ -3,13 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:padding="@dimen/padding_medium"
-        android:text="@string/hello_world"
-        tools:context=".MainActivity" />
+    <TextView android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Waiting for location..."
+    android:id="@+id/locInfo"/>
+    
+    <com.google.android.maps.MapView
+        		 android:id="@+id/mapView"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+                 android:apiKey="0-eQzcECaWWwYmjtRSxHiV1Tnc8kQNVcVPrHocQ"
+                 />
 
 </RelativeLayout>
