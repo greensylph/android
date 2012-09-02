@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/gridview_padding_loose" android:layout_marginTop="@dimen/gridview_padding_loose" android:adjustViewBounds="false" android:layout_weight="1.0">
+        <com.instagram.android.widget.ConstrainedImageView android:id="@id/row_popular_imageview_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@color/gray" android:adjustViewBounds="false" />
+        <FrameLayout android:id="@id/row_popular_border_1" android:background="@drawable/shape_tile_border" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/gridview_padding_loose" android:layout_marginTop="@dimen/gridview_padding_loose" android:adjustViewBounds="false" android:layout_weight="1.0">
+        <com.instagram.android.widget.ConstrainedImageView android:id="@id/row_popular_imageview_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@color/gray" android:adjustViewBounds="false" />
+        <FrameLayout android:id="@id/row_popular_border_2" android:background="@drawable/shape_tile_border" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/gridview_padding_loose" android:layout_marginTop="@dimen/gridview_padding_loose" android:adjustViewBounds="false" android:layout_weight="1.0">
+        <com.instagram.android.widget.ConstrainedImageView android:id="@id/row_popular_imageview_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@color/gray" android:adjustViewBounds="false" />
+        <FrameLayout android:id="@id/row_popular_border_3" android:background="@drawable/shape_tile_border" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/gridview_padding_loose" android:layout_marginTop="@dimen/gridview_padding_loose" android:layout_marginRight="@dimen/gridview_padding_loose" android:adjustViewBounds="false" android:layout_weight="1.0">
+        <com.instagram.android.widget.ConstrainedImageView android:id="@id/row_popular_imageview_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@color/gray" android:adjustViewBounds="false" />
+        <FrameLayout android:id="@id/row_popular_border_4" android:background="@drawable/shape_tile_border" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

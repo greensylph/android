@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="top" android:id="@id/action_bar_camera_controls" android:background="@drawable/action_bar_dark_bg" android:layout_width="fill_parent" android:layout_height="49.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res/com.instagram.android">
+    <ImageView android:layout_gravity="left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/action_bar_dark_left" />
+    <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/action_bar_dark_right" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/action_bar_camera_controls_cancel_button" android:background="@drawable/action_bar_dark_left_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/action_bar_glyph_cancel" />
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:src="@drawable/action_bar_branding" />
+    </LinearLayout>
+    <LinearLayout android:gravity="right|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.instagram.android.widget.ActionBarCameraFlashButton android:id="@id/action_bar_camera_controls_flash_button" android:layout_width="wrap_content" android:layout_height="wrap_content" app:button="@drawable/action_bar_glyph_flash_off" />
+        <com.instagram.android.widget.ActionBarHighlightButton android:id="@id/action_bar_camera_controls_switch_camera_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" app:button="@drawable/action_bar_glyph_switch_camera" />
+    </LinearLayout>
+</FrameLayout>

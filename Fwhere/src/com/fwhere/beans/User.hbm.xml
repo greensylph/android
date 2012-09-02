@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.fwhere.beans.User" 
+        table="org_user" catalog="test">
+ 
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+         <property name="profileId" type="int">
+            <column name="PROFILEID" length="30" not-null="false" />
+        </property>
+        <property name="username" type="string">
+            <column name="USERNAME" length="30" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="PASSWORD" length="50" not-null="true" />
+        </property> 
+         <property name="email" type="string">
+            <column name="EMAIL" length="100" not-null="false" />
+        </property> 
+        <property name="created" type="timestamp">
+            <column name="CREATED" length="19" not-null="false" />
+        </property>
+         <property name="updated" type="timestamp">
+            <column name="UPDATED" length="19" not-null="false" />
+        </property>
+    </class>
+</hibernate-mapping>

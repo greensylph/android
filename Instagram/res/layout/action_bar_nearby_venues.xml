@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="top" android:background="@drawable/action_bar_bg" android:layout_width="fill_parent" android:layout_height="49.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/action_bar_button_back" android:background="@drawable/action_bar_left_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/action_bar_glyph_back" android:contentDescription="@string/back" />
+    <com.instagram.android.widget.FreightSanBoldSCTextView android:textSize="@dimen/action_bar_title" android:textColor="@color/action_bar_title_textview_dark" android:layout_gravity="center" android:id="@id/action_bar_textview_title" android:paddingLeft="@dimen/action_bar_title_left_padding" android:layout_width="0.0px" android:layout_height="wrap_content" android:text="@string/select_a_location" android:shadowColor="@color/action_bar_title_shadow" android:shadowDx="0.0" android:shadowDy="2.5" android:shadowRadius="1.0" android:layout_weight="1.0" />
+    <com.instagram.android.widget.RefreshButton android:id="@id/action_bar_button_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

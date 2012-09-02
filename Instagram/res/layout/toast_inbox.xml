@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.instagram.android.widget.CustomToastView android:gravity="center" android:id="@id/toast_inbox" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="2.0" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="2.0" />
+        <LinearLayout android:layout_width="12.0dip" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="6.0">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:background="@drawable/notification_toast_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/toast_inbox_icon_comments" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginRight="4.0dip" android:src="@drawable/notification_toast_comments" />
+                <TextView android:textSize="@dimen/toast_inbox_text_size" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/toast_inbox_textview_comments" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:text="c: " android:singleLine="true" />
+                <ImageView android:id="@id/toast_inbox_icon_likes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/notification_toast_likes" />
+                <TextView android:textSize="@dimen/toast_inbox_text_size" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/toast_inbox_textview_likes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:text="l: " android:singleLine="true" />
+                <ImageView android:id="@id/toast_inbox_icon_relationships" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/notification_toast_relationships" />
+                <TextView android:textSize="@dimen/toast_inbox_text_size" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/toast_inbox_textview_relationships" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="r: " android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.instagram.android.widget.CustomToastView>

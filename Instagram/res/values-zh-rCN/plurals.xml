@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_seconds_ago">
+        <item quantity="other">%s 秒前</item>
+        <item quantity="one">%s 秒前</item>
+    </plurals>
+    <plurals name="x_minutes_ago">
+        <item quantity="other">于 %s 分钟前</item>
+        <item quantity="one">%s 分钟前</item>
+    </plurals>
+    <plurals name="x_hours_ago">
+        <item quantity="other">%s 小时前</item>
+        <item quantity="one">%s 小时前</item>
+    </plurals>
+    <plurals name="x_days_ago">
+        <item quantity="other">%s 天前</item>
+        <item quantity="one">%s 天前</item>
+    </plurals>
+    <plurals name="x_weeks_ago">
+        <item quantity="other">%s 周前</item>
+        <item quantity="one">%s 周前</item>
+    </plurals>
+    <plurals name="number_of_photos_hashtag_header">
+        <item quantity="other">%s张照片</item>
+        <item quantity="one">%s 张照片</item>
+    </plurals>
+</resources>

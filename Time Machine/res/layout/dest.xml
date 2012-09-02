@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/dest"
+    android:orientation="vertical" >
+
+<LinearLayout
+    android:id="@+id/mainLayout"
+    android:layout_width="533dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="right"
+    android:layout_weight="0.31" >
+
+                <com.google.ads.AdView
+                    android:id="@+id/ad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="21dp"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="a14fa652705f63b"
+                    ads:loadAdOnCreate="true" >
+                </com.google.ads.AdView>
+            </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/InnerRelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:layout_weight="0.63" >
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/stop" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/cancelButton"
+            android:layout_marginRight="71dp"
+            android:text="@string/date"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/dateTv"
+            android:layout_alignBottom="@+id/dateTv"
+            android:layout_marginLeft="34dp"
+            android:layout_toRightOf="@+id/linearLayout1"
+            android:text="@string/leaving"
+            android:textSize="30dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/metadata_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/form_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <EditText android:id="@id/email" android:background="@drawable/input_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/email" android:singleLine="true" android:inputType="textEmailAddress" android:imeOptions="actionNext" />
+        <EditText android:id="@id/username" android:background="@drawable/input_middle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/username" android:singleLine="true" android:inputType="textEmailAddress" android:imeOptions="actionNext" />
+        <EditText android:id="@id/password" android:background="@drawable/input_middle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/password" android:singleLine="true" android:inputType="textPassword" android:imeOptions="actionNext" />
+        <EditText android:id="@id/phone" android:background="@drawable/input_middle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/phone_optional" android:singleLine="true" android:inputType="phone" android:imeOptions="actionDone" />
+        <RelativeLayout android:id="@id/fragment_sign_up_imageview_row" android:background="@drawable/input_bottom" android:layout_width="fill_parent" android:layout_height="80.0dip">
+            <FrameLayout android:id="@id/fragment_sign_up_imageview_box" android:background="@color/metadata_background" android:layout_width="60.0dip" android:layout_height="60.0dip">
+                <ImageView android:layout_gravity="center" android:id="@id/fragment_sign_up_imageview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/signup_glyph_avatar" />
+            </FrameLayout>
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/dark_silver" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/set_a_profile_picture" android:layout_toRightOf="@id/fragment_sign_up_imageview_box" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView android:textColorLink="@color/link_color" android:id="@id/tos_warning" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" style="@style/SignUpTextStyle" />
+        <Button android:textSize="@dimen/text_size_large_button" android:textStyle="bold" android:textColor="@color/white" android:id="@id/signUpButton" android:background="@drawable/button_large_green_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/signUp" android:shadowColor="@color/text_shadow_green_button" android:shadowDx="0.0" android:shadowDy="2.0" android:shadowRadius="1.0" />
+    </LinearLayout>
+</ScrollView>

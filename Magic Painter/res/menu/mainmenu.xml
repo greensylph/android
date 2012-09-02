@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<item android:id="@+id/newphoto" android:showAsAction="ifRoom|withText" android:title="New" android:icon="@drawable/newdark"></item>
+<item android:id="@+id/savephoto" android:showAsAction="ifRoom|withText" android:title="Save" android:icon="@drawable/savephoto"></item>
+<item android:id="@+id/palette" android:showAsAction="ifRoom|withText" android:title="Palette" android:icon="@drawable/palette"></item>
+
+
+</menu>

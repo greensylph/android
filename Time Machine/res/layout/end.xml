@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/dest"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        
+        android:layout_centerHorizontal="true" >
+
+        <com.google.ads.AdView
+            android:id="@+id/ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="21dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="a14fa652705f63b"
+            ads:loadAdOnCreate="true" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/InnerRelativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent" >
+
+        <Button
+            android:id="@+id/dismissButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:text="@string/back" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="22dp"
+            android:text="@string/prompt"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

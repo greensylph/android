@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="top" android:background="@drawable/action_bar_dark_bg" android:layout_width="fill_parent" android:layout_height="49.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res/com.instagram.android">
+    <ImageButton android:layout_gravity="left|center" android:id="@id/button_back" android:background="@drawable/action_bar_dark_left_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/action_bar_glyph_back" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/icon_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:weightSum="4.0" android:layout_weight="1.0">
+        <com.instagram.android.widget.ActionBarHighlightButton android:id="@id/button_toggle_borders" android:layout_width="wrap_content" android:layout_height="wrap_content" app:button="@drawable/action_bar_glyph_frame" />
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.instagram.android.widget.TiltShiftButton android:id="@id/button_tiltshift_menu" android:layout_width="wrap_content" android:layout_height="wrap_content" app:button="@drawable/action_bar_tiltshift_compound" />
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.instagram.android.widget.ActionBarHighlightButton android:id="@id/button_toggle_lux" android:layout_width="wrap_content" android:layout_height="wrap_content" app:button="@drawable/action_bar_glyph_lux_compound" />
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.instagram.android.widget.ActionBarHighlightButton android:id="@id/button_rotate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" app:button="@drawable/action_bar_glyph_rotate" />
+    </LinearLayout>
+    <ImageView android:id="@id/button_accept" android:background="@drawable/action_bar_dark_right_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/action_bar_glyph_next" android:scaleType="matrix" />
+</LinearLayout>

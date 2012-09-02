@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.fwhere.beans.Meetup" 
+        table="org_meetup" catalog="test">
+ 
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="30" not-null="true" />
+        </property>
+        <property name="score" type="int">
+            <column name="SCORE" not-null="false" />
+        </property>
+        <property name="limitNum" type="int">
+            <column name="LIMITNUM" not-null="false" />
+        </property>
+        <property name="picture" type="string">
+            <column name="PICTURE" length="100" not-null="false" />
+        </property>
+        <property name="started" type="timestamp">
+            <column name="STARTED" length="19" not-null="false" />
+        </property>
+         <property name="address" type="string">
+            <column name="ADDRESS" length="100" not-null="false" />
+        </property> 
+         <property name="description" type="string">
+            <column name="DESCRIPTION" length="200" not-null="false" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	
+	<!-- 配置文件加载 -->
+    <bean id="propertyConfigure" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>WEB-INF/classes/config/database.properties</value> 
+ 			</list>
+		</property>
+	</bean>
+
+	<!-- Hibernate 数据源配置 -->
+	<import resource="classes/config/DataSource.xml" />
+	<import resource="classes/config/HibernateSessionFactory.xml" />
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- 业务逻辑层提供事务管理 -->
+	<bean id="transactionProxyFactoryBean"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+		lazy-init="true" abstract="true">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="insert*">PROPAGATION_REQUIRED</prop>
+				<prop key="add*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="edit*">PROPAGATION_REQUIRED</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED</prop>
+				<prop key="enable*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+	
+    
+	<!-- Beans Declaration -->
+	<import resource="classes/spring/business-aop-context.xml" />
+	<import resource="classes/spring/business-context.xml" />
+	<import resource="classes/spring/action-controller-context.xml" />
+
+	<!-- -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<description>
+			ifpre::要使用文件上传功能，必须在定义文件中加入MeltipartResolver,
+			可以选用CommonsMutipartResolver或CosMultipartResolver
+		</description>
+		<property name="maxUploadSize">
+			<value>3000000</value>
+		</property>
+	</bean> 
+</beans>

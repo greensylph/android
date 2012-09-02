@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+
+    <TextView
+        android:id="@+id/tvAccelerometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tvAccelerometer" />
+
+    <TextView
+        android:id="@+id/tvMagentic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tvMagentic" />
+
+    <TextView
+        android:id="@+id/tvLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tvLight" />
+
+    <TextView
+        android:id="@+id/tvOrientation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tvOrientation" />
+
+    <TextView
+        android:id="@+id/tvSensors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tvSensors" />
+
+</LinearLayout>

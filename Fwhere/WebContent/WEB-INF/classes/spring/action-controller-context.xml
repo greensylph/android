@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<!-- JSP视图解析 -->
+	<bean id="viewResolver"
+		class="com.fwhere.util.MultipleViewResolver">
+		<property name="resolvers">
+			<map>
+				<entry key="jsp">
+					<bean
+						class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+						<property name="viewClass"
+							value="org.springframework.web.servlet.view.JstlView" />
+						<property name="prefix">
+							<value>/</value>
+						</property>
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<!-- UserController -->
+	<bean id="userController"
+		class="com.fwhere.controller.UserController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+				<property name="mappings">
+					<props>
+						<prop key="/register.do">register</prop>
+						<prop key="/login.do">login</prop>
+						<prop key="/home.do">home</prop>
+						<prop key="/logout.do">logout</prop>
+						<prop key="/friends.do">friends</prop>
+					</props>
+				</property>
+			</bean>
+		</property>
+		<property name="userService" ref="userService" />
+	</bean>
+
+	<bean id="userUrlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/register.do">userController</prop>
+				<prop key="/login.do">userController</prop>
+				<prop key="/home.do">userController</prop>
+				<prop key="/logout.do">userController</prop>
+				<prop key="/friends.do">userController</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- MeetupController -->
+	<bean id="meetupController"
+		class="com.fwhere.controller.MeetupController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+				<property name="mappings">
+					<props>
+						<prop key="/meetups.do">meetups</prop>
+					</props>
+				</property>
+			</bean>
+		</property>
+		<property name="meetupService" ref="meetupService" />
+	</bean>
+
+	<bean id="meetupUrlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/meetups.do">meetupController</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- Controller -->
+	<bean id="profileController"
+		class="com.fwhere.controller.ProfileController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+				<property name="mappings">
+					<props>
+						<prop key="/profile.do">profile</prop>
+						<prop key="/updateContent.do">updateContent</prop>
+						<prop key="/uploadImg.do">uploadImg</prop>
+						<prop key="/updateImg.do">updateImg</prop>
+						<prop key="/saveImg.do">saveImg</prop>
+					</props>
+				</property>
+			</bean>
+		</property>
+		<property name="profileService" ref="profileService" />
+		<property name="userService" ref="userService" />
+		<property name="cacheSeconds" value="0"/> 
+	</bean>
+
+	<bean id="profileUrlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/profile.do">profileController</prop>
+				<prop key="/updateContent.do">profileController</prop>
+				<prop key="/uploadImg.do">profileController</prop>
+				<prop key="/updateImg.do">profileController</prop>
+				<prop key="/saveImg.do">profileController</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

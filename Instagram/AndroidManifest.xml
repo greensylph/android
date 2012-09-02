@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="110" android:versionName="1.1.0" android:installLocation="auto" package="com.instagram.android"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.instagram.android.permission.C2D_MESSAGE" />
+    <permission android:name="com.instagram.android.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+    <uses-feature android:name="android.hardware.screen.portrait" />
+    <uses-feature android:glEsVersion="131072" android:required="true" />
+    <supports-gl-texture android:name="GL_OES_compressed_ETC1_RGB8_texture" />
+    <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" />
+    <application android:theme="@style/InstagramTheme" android:label="@string/app_name" android:icon="@drawable/icon" android:name=".InstagramApplication" android:allowTaskReparenting="true" android:hardwareAccelerated="true">
+        <activity android:name=".activity.MainTabActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="instagr.am" android:pathPrefix="/p/" />
+                <data android:scheme="https" android:host="instagr.am" android:pathPrefix="/p/" />
+                <data android:scheme="http" android:host="instagram.com" android:pathPrefix="/p/" />
+                <data android:scheme="https" android:host="instagram.com" android:pathPrefix="/p/" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.SignedOutFragmentLayout" android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:name=".activity.MediaCaptureActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".activity.MetadataActivity" />
+        <activity android:label="@string/nearby" android:name=".activity.NearbyVenuesActivity" />
+        <activity android:label="@string/connectTwitter" android:name=".activity.TwitterAuthActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".activity.FoursquareAuthActivity" />
+        <activity android:name=".activity.TumblrAuthActivity" />
+        <activity android:name=".activity.ActivityInTab" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".activity.NewsActivityInTab" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ArbitraryFragmentActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.instagram.android.support.camera.CropImage" android:screenOrientation="portrait" android:hardwareAccelerated="false" />
+        <service android:name=".service.PendingMediaService" />
+        <service android:name=".service.MediaService" />
+        <service android:name=".service.TumblrService" />
+        <service android:name=".service.AutoCompleteUserService" />
+        <service android:name=".service.AutoCompleteHashtagService" />
+        <service android:name=".receiver.C2DMReceiver" />
+        <service android:name=".service.PushRegistrationService" />
+        <receiver android:name="com.google.android.c2dm.C2DMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.instagram.android" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.instagram.android" />
+            </intent-filter>
+        </receiver>
+        <activity android:name=".activity.SimpleWebViewActivity" />
+    </application>
+</manifest>

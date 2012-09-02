@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fwhere.beans.Profile" table="org_profile"
+		catalog="test">
+
+		<id name="id" type="int">
+			<column name="id" />
+			<generator class="identity" />
+		</id>
+		<property name="userid" type="int">
+			<column name="USERID" length="30" not-null="true" />
+		</property>
+		<property name="nickname" type="string">
+			<column name="NICKNAME" length="30" not-null="false" />
+		</property>
+		<property name="gender" type="int">
+			<column name="GENDER"  not-null="true" />
+		</property>
+		<property name="age" type="int">
+			<column name="AGE"  not-null="false" />
+		</property>
+		<property name="city" type="string">
+			<column name="CITY" length="30" not-null="false" />
+		</property>
+		<property name="area" type="string">
+			<column name="AREA" length="30" not-null="false" />
+		</property>
+		 <property name="job" type="string">
+            <column name="job" length="50" not-null="false" />
+        </property>
+		<property name="edu" type="string">
+			<column name="EDU" length="50" not-null="false" />
+		</property>
+		<property name="birth" type="timestamp">
+			<column name="BIRTH" length="19" not-null="true" />
+		</property>
+		<property name="img" type="string">
+			<column name="IMG" length="200" not-null="false" />
+		</property>
+		<property name="tags" type="string">
+			<column name="TAGS" length="200" not-null="false" />
+		</property>
+		<property name="qq" type="string">
+			<column name="QQ" length="30" not-null="false" />
+		</property>
+		<property name="email" type="string">
+			<column name="EMAIL" length="30" not-null="false" />
+		</property>
+		<property name="msn" type="string">
+			<column name="MSN" length="50" not-null="false" />
+		</property>
+		<property name="interest" type="string">
+			<column name="INTEREST" length="50" not-null="false" />
+		</property>
+		<property name="description" type="string">
+			<column name="DESCRIPTION" length="200" not-null="false" />
+		</property>
+		<property name="phone" type="string">
+			<column name="PHONE" length="30" not-null="false" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_insert">Add note</string>
+    <string name="menu_revert">Revert</string>
+    <string name="menu_discard">Discard</string>
+
+    <string name="resolve_edit">Edit note</string>
+    <string name="resolve_title">Edit title</string>  
+
+    <string name="title_create">Create note</string>
+    <string name="title_edit">Edit note</string>
+	<string name="title_notes_list">My notes List</string>   
+	<string name="title_note">Note</string>  
+	<string name="title_edit_title">Note title:</string>  
+	
+	<string name="app_name">Yes Pad</string>  
+	<string name="live_folder_name">Notes</string>
+	
+	<string name="button_ok">OK</string>  
+	
+	<string name="error_title">Error</string>
+	<string name="error_message">Error loading note</string>
+	<string name="addnote">New Note</string>
+	<string name="main_title">Yes Pad</string>
+	<string name="newnote">New Note</string>
+	<string name="notelist">My Notes</string>
+	<string name="about_label">About us</string>
+	<string name="exit_label">Exit</string>
+	<string name="about_text">Thank you so much to read this. If you have any advice or suggestion, to change and make our App more interesting. Please Contact us Email: jasonzqc@gmail.com
+</string>
+	<string name="about_title">About us</string>
+</resources>

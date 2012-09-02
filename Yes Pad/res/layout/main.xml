@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/menubg">
+    <!-- android:padding="30dip" > 
+    -->
+    <LinearLayout
+        android:id="@+id/mainLayout11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.google.ads.AdView
+            android:id="@+id/ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="a14fc10af815213"
+            ads:loadAdOnCreate="true" />
+    </LinearLayout>
+    
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/main_title"
+            android:id="@+id/title"
+            android:textSize="50sp" />
+
+        <Button
+            android:id="@+id/newButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/newnote"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip" />
+
+        <Button
+            android:id="@+id/listButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/notelist"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip" 
+            android:layout_marginBottom="10dip"/>
+
+        <Button
+            android:id="@+id/aboutButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_label"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip" 
+            android:layout_marginBottom="10dip"/>
+
+        <Button
+            android:id="@+id/exitButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/exit_label"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip" />
+    </LinearLayout>
+
+</LinearLayout>

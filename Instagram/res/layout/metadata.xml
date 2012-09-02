@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/metadata_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/action_bar_metadata" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="@dimen/form_padding" android:paddingRight="@dimen/form_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.instagram.android.widget.IgAutoCompleteTextView android:id="@id/captionTextView" android:background="@drawable/input_top_default" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:hint="@string/enter_caption" android:singleLine="true" android:inputType="textCapSentences|textAutoCorrect">
+                <requestFocus />
+            </com.instagram.android.widget.IgAutoCompleteTextView>
+            <LinearLayout android:id="@id/metadata_row_location" android:background="@drawable/input_bottom_default" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <CheckBox android:id="@id/geotagCheckBox" android:background="@drawable/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" />
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/geotagTextView" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/enable_geotag" android:layout_weight="1.0" />
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/metadata_gray" android:id="@id/geotagPickLocationHint" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/location" />
+                <ImageView android:id="@id/locationButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/list_tappable" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/linearLayout3" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@id/metadata_row_twitter" android:background="@drawable/input_top_default" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="true">
+                    <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/twitter" android:layout_alignParentLeft="true" />
+                    <ToggleButton android:id="@id/twitterToggle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/metadata_row_facebook" android:background="@drawable/input_middle" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="true">
+                    <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/facebook" android:layout_alignParentLeft="true" />
+                    <ToggleButton android:id="@id/facebookToggle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/metadata_row_foursquare" android:background="@drawable/input_middle" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="true">
+                    <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/foursquare" android:layout_alignParentLeft="true" />
+                    <ToggleButton android:id="@id/foursquareToggle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/metadata_row_tumblr" android:background="@drawable/input_bottom" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="true">
+                    <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tumblr" android:layout_alignParentLeft="true" />
+                    <ToggleButton android:id="@id/tumblrToggle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="userService" parent="transactionProxyFactoryBean">
+		<property name="target">
+			<ref bean="userServiceImpl" />
+		</property>
+	</bean>
+	
+	<bean id="meetupService" parent="transactionProxyFactoryBean">
+		<property name="target">
+			<ref bean="meetupServiceImpl" />
+		</property>
+	</bean>
+	
+	<bean id="profileService" parent="transactionProxyFactoryBean">
+		<property name="target">
+			<ref bean="profileServiceImpl" />
+		</property>
+	</bean>
+</beans>

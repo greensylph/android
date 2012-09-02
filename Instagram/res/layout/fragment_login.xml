@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/metadata_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/form_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <EditText android:id="@id/username" android:background="@drawable/input_top_default" android:nextFocusDown="@id/password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/username" android:lines="1" android:singleLine="true" android:inputType="textEmailAddress" />
+        <EditText android:id="@id/password" android:background="@drawable/input_bottom_default" android:nextFocusUp="@id/username" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/password" android:lines="1" android:singleLine="true" android:inputType="textPassword" android:imeOptions="actionDone" />
+        <Button android:textSize="@dimen/text_size_large_button" android:textStyle="bold" android:textColor="@color/white" android:id="@id/login_fragment_login_button" android:background="@drawable/button_large_green_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/login" android:shadowColor="@color/text_shadow_green_button" android:shadowDx="0.0" android:shadowDy="2.0" android:shadowRadius="1.0" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/link_color" android:layout_gravity="center_horizontal" android:id="@id/forgot_password_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="@string/forgot_password" />
+    </LinearLayout>
+</ScrollView>

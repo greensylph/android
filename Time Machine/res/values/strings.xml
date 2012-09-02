@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, TimeMachineActivity!</string>
+    <string name="app_name">Time Machine</string>
+    <string name="go">Start Tour</string>
+    <string name="stop">Stop Tour</string>
+    <string name="hint">Time Machine</string>
+    <string name="month">Month</string>
+    <string name="day">Day</string>
+    <string name="year">Year</string>
+    <string name="upButton1">TODO</string>
+    <string name="downButton1">TODO</string>
+    <string name="downButton2">TODO</string>
+    <string name="upButton2">TODO</string>
+    <string name="downButton3">TODO</string>
+    <string name="upButton3">TODO</string>
+    <string name="upButton4">TODO</string>
+    <string name="leaving">Leaving for</string>
+    <string name="date">5.6.2012</string>
+    <string name="prompt">Stay hungry, stay foolish.\nYou can never go back to yesterday or in future.
+        Enjoy every moment of your life. Thanks!</string>
+    <string name="back">back</string>
+
+</resources>

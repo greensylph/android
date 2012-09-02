@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@drawable/dark">
+
+     <LinearLayout
+        android:id="@+id/mainLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <com.google.ads.AdView
+            android:id="@+id/ad2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="81dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="a14fa0f3c3dccb3"
+            ads:loadAdOnCreate="true" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp" >
+
+        <TextView
+            android:id="@+id/minTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:text="@string/countMin"
+            android:textSize="60dp" />
+
+        <TextView
+            android:id="@+id/tmp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:text="@string/quote"
+            android:textSize="60dp" />
+
+        <TextView
+            android:id="@+id/secTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="@string/countSec"
+            android:textSize="60dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/InnerRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="@string/cancel" />
+
+        <ImageView
+            android:id="@+id/imgView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/cancelButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="78dp"
+            android:src="@drawable/choice1" />
+
+        <TextView
+            android:id="@+id/counting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/cancelButton"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="60dp"
+            android:text="@string/counting" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Device Properties Example</title>
+	<link rel="stylesheet" href="css-js/jquery.mobile-1.1.1.min.css" />
+	<script src="css-js/jquery-1.7.2.min.js"></script>
+	<script src="css-js/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="css-js/cordova-2.0.0.js"></script>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript" charset="utf-8">
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
+
+    // onSuccess Geolocation
+    //
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+                            'Longitude: '          + position.coords.longitude             + '<br />' +
+                            'Altitude: '           + position.coords.altitude              + '<br />' +
+                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                            'Heading: '            + position.coords.heading               + '<br />' +
+                            'Speed: '              + position.coords.speed                 + '<br />' +
+                            'Timestamp: '          +                                   position.timestamp          + '<br />';
+    }
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+
+    </script>
+  </head>
+  <body>
+    <div data-role="page" id="home">
+    	<div data-role="header" data-theme="b">
+    		<h1>Location F</h1>
+    	</div>
+    	
+    	<div data-role="content" data-theme="b">
+    		<!-- <a href="#page3" data-role="button" data-theme="e">Page3 link</a> -->
+    		<p id="geolocation">Finding geolocation...</p>
+    		
+    	</div><!-- content -->
+    	
+    	<!-- class="navi-bar" -->
+		<style>	
+			.nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 32px !important; }
+			.nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+			#chat .ui-icon { background:  url(icons/09-chat2.png) 50% 50% no-repeat; background-size: 24px 22px; }
+			#email .ui-icon { background:  url(icons/18-envelope.png) 50% 50% no-repeat; background-size: 24px 16px;  }
+			#login .ui-icon { background:  url(icons/30-key.png) 50% 50% no-repeat;  background-size: 12px 26px; }
+			#beer .ui-icon { background:  url(icons/88-beermug.png) 50% 50% no-repeat;  background-size: 22px 27px; }
+			#coffee .ui-icon { background:  url(icons/100-coffee.png) 50% 50% no-repeat;  background-size: 20px 24px; }
+			#skull .ui-icon { background:  url(icons/21-skull.png) 50% 50% no-repeat;  background-size: 22px 24px; }
+		</style>
+		
+		<div data-role="footer" class="nav-glyphish-example" data-position="fixed" >
+			<div data-role="navbar" class="nav-glyphish-example" data-grid="c">
+			<ul>
+				<li><a href="#page1" id="chat" data-icon="custom"></a></li>
+				<li><a href="#" id="email" data-icon="custom"></a></li>
+				<li><a href="#" id="skull" data-icon="custom"></a></li>
+				<li><a href="#" id="beer" data-icon="custom"></a></li>
+			</ul>
+			</div>
+		</div>
+    </div>
+    
+    <div data-role="page" id="page1">
+    	<div data-role="header">
+    		<a href="#home" data-role="delete">Back</a>
+    		<h1>Page 1 header</h1>
+    	</div>
+    	<div data-role="content">
+    		<h1>Page 1 Content</h1>
+    	</div>
+     	<div data-role="footer" data-id="maintoolbar" data-position="fixed">
+    		<h1>Page 1 Footer</h1>
+    	</div>
+	</div>
+    
+  </body>
+</html>
